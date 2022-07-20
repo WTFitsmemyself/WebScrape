@@ -6,10 +6,7 @@ tree_paragraph = tree.xpath("//title/text()")[0]
 tree_hello = tree.xpath("//p/text()")[0]
 string_tree = etree.tostring(tree)
 
-print(string_tree)
-print(tree_hello)
-print(tree_paragraph)
-
-for i in range(0, 2):
-    tree_list = tree.xpath("//li/text()")[i]
-    print(tree_list)
+li_list = tree.xpath("//li")
+for li in li_list:
+    lisT = ''.join(map(str.strip, li.xpath(".//text()")))
+    print(lisT)
