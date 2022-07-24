@@ -2,6 +2,7 @@ from lxml import etree
 
 src = "src/web_page.html"
 tree = etree.parse(src)
+print(tree)
 tree_paragraph = tree.xpath("//title/text()")[0]
 tree_hello = tree.xpath("//p/text()")[0]
 string_tree = etree.tostring(tree)
