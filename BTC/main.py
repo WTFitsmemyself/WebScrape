@@ -14,7 +14,6 @@ for page_num in range(first_page, 100+1):
     final_url = base_url + str(page_num)
     resp = requests.get(final_url, headers=headers)
     tree = html.fromstring(resp.text)
-
     key = tree.xpath('//*[@class="text-nowrap"]/a/text()')
     address_c = tree.xpath('//*[@class="text-nowrap"][2]')
     address_u_c = tree.xpath('//*[@class="text-nowrap"][3]')
@@ -29,6 +28,8 @@ for page_num in range(first_page, 100+1):
         address_ok = ''.join(map(str.strip, add.xpath(".//text()")))
         address_un_comp.append(address_ok)
 
-    print(private_keys[0][0])
-    print(address_comp[0])
-    print(address_un_comp[0])
+
+for page_num in range(first_page, 100+1):
+    print(private_keys[page_num][0])
+    print(address_comp[page_num])
+    print(address_un_comp[page_num])
