@@ -20,7 +20,7 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 base_url = "https://privatekeys.pw/keys/bitcoin/"
 
 # Loop of the program
-for page_num in range(1626, last_page):
+for page_num in range(2114, last_page):
     final_url = base_url + str(page_num)
     driver.get(final_url)
     time.sleep(3)
