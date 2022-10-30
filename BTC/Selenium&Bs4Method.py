@@ -20,14 +20,14 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), opti
 base_url = "https://privatekeys.pw/keys/bitcoin/"
 
 # Loop of the program
-for page_num in range(2979, last_page):
+for page_num in range(4151, last_page):
     final_url = base_url + str(page_num)
     driver.get(final_url)
-    time.sleep(3)
+    time.sleep(2)
     soup = BeautifulSoup(driver.page_source, "html.parser")
     result = soup.find("span", {"class": "badge bg-light text-dark"})
     text_final = result.text
     if float(text_final) > 0:
         print(f"{page_num}: {text_final}")
     else:
-        print(f"{page_num}: NONE")
+        print(f"{page_num}: None")
