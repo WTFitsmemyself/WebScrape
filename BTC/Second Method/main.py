@@ -9,7 +9,7 @@ for i in range(current_num_key, last_key):
     wallet = Wallet(new)
     # print(wallet)
     print(f"Num KEY = {i}")
-    if wallet.address.mainnet.pubaddr3 == choosen_one:
+    if wallet.address.mainnet.pubaddr3 in choosen_one:
         print(wallet)
         print('------------------------------------------------------')
     elif wallet.address.mainnet.pubaddr1 == choosen_one:

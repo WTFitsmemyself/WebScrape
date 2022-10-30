@@ -1,7 +1,9 @@
 import csv
+
 new_list = []
-data_find = '1FeexV6bAHb8ybZjqQMjJrcCrHGW9sb6uF'
-with open('/Users/hosyn/Desktop/wallets.csv', newline='') as f:
+data_find = '_'
+
+with open('wallets.csv', newline='') as f:
     reader = csv.reader(f)
     data = list(reader)
 
