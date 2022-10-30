@@ -13,3 +13,5 @@ for i in range(0, 2000):
 
 if data_find in new_list:
     print(f"found: {data_find}")
+
+print(new_list[0])
