@@ -6,7 +6,7 @@ key_file_name = "found_wallets.txt"
 excel_wallet = "wallets.csv"
 mode_key_file = "a"
 new_list = []
-curr_key = 33333333
+curr_key = 33377288
 last_key = 115792089237316195423570985008687907853269984665640564039457584007913129639935
 last_wallet_number = 10000
 
@@ -35,7 +35,7 @@ def print_status(key):
     print('------------------------------------------------------')
 
 
-def mainProgram(cur_key, las_key):
+def main_program(cur_key, las_key):
     for i in range(cur_key, las_key):
         new = "{:064X}".format(i)
         wallet = Wallet(new)
@@ -61,11 +61,13 @@ def mainProgram(cur_key, las_key):
 
 wallets_list(excel_wallet, last_wallet_number)
 
-p1 = Process(target=mainProgram, args=(33333333, 333333333))
-p2 = Process(target=mainProgram, args=(333333333, 3333333333))
-p3 = Process(target=mainProgram, args=(3333333333, 33333333333))
-p4 = Process(target=mainProgram, args=(33333333333, 333333333333))
-p5 = Process(target=mainProgram, args=(333333333333, 3333333333333))
+p1 = Process(target=main_program, args=(33377288, 34377288))
+p2 = Process(target=main_program, args=(34377288, 35377288))
+p3 = Process(target=main_program, args=(35377288, 36377288))
+p4 = Process(target=main_program, args=(36377288, 37377288))
+p5 = Process(target=main_program, args=(37377288, 38377288))
+p6 = Process(target=main_program, args=(38377288, 39377288))
+p7 = Process(target=main_program, args=(39377288, 40377288))
 
 if __name__ == '__main__':
     p1.start()
@@ -73,8 +75,12 @@ if __name__ == '__main__':
     p3.start()
     p4.start()
     p5.start()
+    p6.start()
+    p7.start()
     p1.join()
     p2.join()
     p3.join()
     p4.join()
     p5.join()
+    p6.join()
+    p7.join()
