@@ -3,14 +3,14 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/BTC/Second Method/wallets.csv">
+        <entry key="/BTC/Second_Method/wallets.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/BTC/Second_Method/wallets.csv">
+        <entry key="$USER_HOME$/Desktop/wallets.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
